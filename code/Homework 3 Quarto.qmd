@@ -1,26 +1,26 @@
 ---
-title: "Homework 2 Quarto"
+title: "Homework 3 Quarto"
 format: pdf
 editor: visual
 ---
 
-## Quarto
-
-Quarto enables you to weave together content and executable code into a finished document. To learn more about Quarto see <https://quarto.org>.
-
-## Running Code
-
-When you click the **Render** button a document will be generated that includes both content and the output of embedded code. You can embed code like this:
+<https://github.com/mateomoribaez-design/ENVS-193DS_homework-03.git>
 
 ```{r}
-1 + 1
+#| message: false
+#| warning: false
+library(tidyverse)
+library(here)
+library(janitor)
+library(readxl)  # lead in packages in setup chunk
 ```
-
-You can add options to executable code like this
 
 ```{r}
-#| echo: false
-2 * 2
-```
+# store salinity data
+salinity <- read_csv(
+  here("data", "salinity-pickleweed.csv"))
 
-The `echo: false` option disables the printing of code (only output is displayed).
+# store personal data
+your_object_name <- read_csv(
+  here("data", "your_personal_file.csv"))
+```
