@@ -21,6 +21,92 @@ salinity <- read_csv(
   here("data", "salinity-pickleweed.csv"))
 
 # store personal data
-your_object_name <- read_csv(
-  here("data", "your_personal_file.csv"))
+my_data <- read_csv(
+  here("data", "My_data.csv"))
 ```
+
+### Problem 1
+
+#### a.
+
+The two appropriate tests to use in this scenario are the Pearson correlation and Simple linear regression tests. The pearson correlation test measures strength of association while the simple linear regression test models the response variable as a function of the predictor variable (biomass and salinity respectively).
+
+#### b.
+
+```{r}
+
+ggplot(salinity,
+      aes(x = salinity_mS_cm,
+        y = pickleweed)) +
+  geom_point(color = "darkgreen", size = 3) +
+  geom_smooth(method = "lm",
+              se = TRUE,
+              color = "steelblue") +
+  labs(
+    x = "Soil Salinity (mS/cm)",
+    y = "Pickleweed Biomass (g)",
+    title = "Relationship Between Soil Salinity and Pickleweed Biomass"
+  ) +
+  theme_minimal()
+
+
+```
+
+#### c and d
+
+#### Checking assumptions
+
+Linearity
+
+```{r}
+plot(salinity$salinity_mS_cm, # create scatterplot of soil salinity vs pickleweed biomass
+     salinity$pickleweed,
+     xlab = "Soil Salinity (mS/cm)", # label x and y axis
+     ylab = "Biomass (g)")
+model <- lm(pickleweed ~ salinity_mS_cm, data = salinity) # fit linear regression model predicting biomass from salinity
+abline(model, col = "red") # add fitted regression line to scatterplot
+```
+
+I checked the linearity assumption by plotting soil salinity against pickleweed biomass with a scatterplot and a fitted linear regression line. The scatterplot shows an increasing trend with salinity, which suggests that the relationship between salinity and biomass is somewhat linear. I think the linearity assumption is satisfied.
+
+Normality
+
+```{r}
+qqnorm(residuals(model)) # create qq plot of the model residuals to visually check if they follow a normal distribution
+qqline(residuals(model), col = "blue") # Add reference line to qqplot
+
+shapiro.test(residuals(model)) # use a shapiro-wilk test for normality
+```
+
+I checked for normality using both a qqplot and a shapiro-wilk test. The qq plot shows that most data points fall close to the reference line, indicating that the residuals are decently normally distributed. I think that together, these results show that the normality assumption is met.
+
+Homoscedasticity
+
+```{r}
+plot(fitted(model), residuals(model), # plot fitted values against model residuals
+     xlab = "Fitted Values", # predicted biomass values from the model
+     ylab = "Residuals") # difference between observed and predicted values
+abline(h = 0, col = "red") # add horizontal reference line
+```
+
+I checked for homoscedasticity by plotting residuals against fitted values from the regression model. The points are randomly scattered around the horizontal reference line, without a clear pattern, which suggests that the variance of residuals is constant across predicted values. I think the homoscedasticity assumption is met.
+
+#### Run the test
+
+Pearson correlation
+
+```{r}
+cor.test(salinity$salinity_mS_cm, # use a Pearson correlation test to measure strength and direction of the relationship between salinity and biomass
+         salinity$pickleweed,
+         method = "pearson")
+```
+
+To evaluate the strength of the relationship between soil salinity and pickleweed biomass, I used a Pearson correlation test because both variables are continuous. The test output showed a moderate positive correlation between salinity and biomass (r = 0.534, t = 2.898, df = 21, p = 0.0086). The 95% confidence interval for the correlation coefficient ranged from 0.157 to 0.758. With a p-value less than 0.05, we reject the null hypothesis and conclude that there is a significant positive relationship between soil salinity and pickleweed biomass.
+
+Linear regression (same from above)
+
+```{r}
+summary(model) # display a summary of the linear regression model
+```
+
+I use simple linear regression to model pickleweed biomass as a function of soil salinity. This test shows us how much biomass changes with increasing salinity. The regression outputs show that soil salinity significantly predicts pickleweed biomass (β = 2.083, SE = 0.719, t = 2.898, p = 0.0086). The model intercept was 13.09, showing the predicted biomass when the salinity is zero, and there was a 28.6% variation in biomass (R² = 0.286). Overall, the model was statistically significant (F(1,21) = 8.398, p = 0.0086).
