@@ -197,3 +197,15 @@ Figure 2: Daily Ocean Participation Relative to Continuous Workload Hours. This 
 #### a. 
 
 My affective visualization could show a shoreline where my academics and personal lives are vaguely summarized. The "No" dots are shown in the bottom of the chart, representing the sand, and the "yes" dots are shown above, representing an ocean line. The markings, gridlines, axes, and wording could all be symbolically replaced with things like a horizon, a sun, some birds, and maybe some fish. Adding details like rocks in the sand and sea spray on the ocean could be my way of depicting the data points in the graph without using actual data points in R.
+
+#### b. 
+
+![](images/clipboard-731790774.jpeg)
+
+#### c. 
+
+My drawing isn't very great, I might end up doing a canva illustration for my final, or use sketches to make better components like the shark fins and the bird. I also know that with better coloring tools I can color the ocean and sand in much better.
+
+![](images/clipboard-2481209428.jpeg)
+
+#### d. 
