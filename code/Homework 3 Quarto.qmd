@@ -2,6 +2,11 @@
 title: "Homework 3 Quarto"
 format: pdf
 editor: visual
+html:
+    toc: true
+    toc-depth: 3
+    toc-location: left
+    toc-float: true
 ---
 
 <https://github.com/mateomoribaez-design/ENVS-193DS_homework-03.git>
@@ -228,10 +233,16 @@ My drawing isn't very great, I might end up doing a canva illustration for my fi
 
 #### a.
 
-The statistical tests that the authors used are linear regression analysis and t-test. They use these to evaluate the body weight (W) and total length (L) relationships of 47 fish species. These tests calculate regression coefficients and the coefficient of determination to check if species show isometric or allometric growth. The summary table and histogram in the article are used to display the distribution of these growth types and the biological condition of native vs invasive populations.
+The statistical tests that the authors used are linear regression analysis and t-test. They use these to evaluate the body weight (W) and total length (L) relationships of 47 fish species. These tests calculate regression coefficients and the coefficient of determination to check if species show isometric or allometric growth. The summary table and histogram in the article are used to display the distribution of these growth types and the biological condition of native vs invasive populations.![](images/clipboard-3404324976.png)
 
 #### b.
 
-The large summary table represents the data accurately but is missing immediate visual clarity, there is some time that must be invested before getting a general understanding. It includes 47 rows of regression statistics without clear visuals that explain where these values come from, or if they represent native or invasive species. The histogram shows the frequency of specific growth types across all species, but it does not specifically show the model predictions or the standard errors mentioned in the text. Adding on, to understand the "Condition Factor," the reader has to manually cross-reference the table and text.
+The large summary table represents the data accurately but is missing immediate visual clarity, there is some time that must be invested before getting a general understanding. It includes 47 rows of regression statistics without clear visuals that explain where these values come from, or if they represent native or invasive species.
 
 #### c. 
+
+The summary table most likely has a low data to ink ratio due to the uniform presentation of five distinct statistical columns for almost fifty species. This overwhelms the reader with visual clutter. The absence of distinctive columns don't help highlight significant results, which ends up as a lack of visual aesthetics.
+
+#### d. 
+
+To improve the table, I would tell the authors to group species by their respective categories (zooplanktivores vs carnivores, etc.) and use bolding to emphasize species with alarming allometric growth or higher than usual condition factors. For an alternative statistical figure, I would recommend that they use a scatter plot with regression lines to show the native vs invasive species. This would better illustrate the underlying length-weight relationship that the current figures only summarize in groups. This would make the visualization of that relationship much clearer for the reader.
