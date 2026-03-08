@@ -1,0 +1,828 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.8.25">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+<meta name="author" content="Mateo Mori">
+<meta name="dcterms.date" content="2026-03-07">
+
+<title>Homework 3</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+/* CSS for syntax highlighting */
+html { -webkit-text-size-adjust: 100%; }
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+</style>
+
+
+<script src="Homework 3 Quarto_files/libs/clipboard/clipboard.min.js"></script>
+<script src="Homework 3 Quarto_files/libs/quarto-html/quarto.js" type="module"></script>
+<script src="Homework 3 Quarto_files/libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="Homework 3 Quarto_files/libs/quarto-html/axe/axe-check.js" type="module"></script>
+<script src="Homework 3 Quarto_files/libs/quarto-html/popper.min.js"></script>
+<script src="Homework 3 Quarto_files/libs/quarto-html/tippy.umd.min.js"></script>
+<script src="Homework 3 Quarto_files/libs/quarto-html/anchor.min.js"></script>
+<link href="Homework 3 Quarto_files/libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="Homework 3 Quarto_files/libs/quarto-html/quarto-syntax-highlighting-7b89279ff1a6dce999919e0e67d4d9ec.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="Homework 3 Quarto_files/libs/bootstrap/bootstrap.min.js"></script>
+<link href="Homework 3 Quarto_files/libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="Homework 3 Quarto_files/libs/bootstrap/bootstrap-d6a003b94517c951b2d65075d42fb01b.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+
+
+</head>
+
+<body class="quarto-light">
+
+<div id="quarto-content" class="page-columns page-rows-contents page-layout-article toc-left">
+<div id="quarto-sidebar-toc-left" class="sidebar toc-left">
+  <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">Table of contents</h2>
+   
+  <ul>
+  <li><a href="#problem-1" id="toc-problem-1" class="nav-link active" data-scroll-target="#problem-1"><span class="header-section-number">0.1</span> Problem 1</a></li>
+  <li><a href="#problem-2" id="toc-problem-2" class="nav-link" data-scroll-target="#problem-2"><span class="header-section-number">0.2</span> Problem 2</a></li>
+  <li><a href="#problem-3" id="toc-problem-3" class="nav-link" data-scroll-target="#problem-3"><span class="header-section-number">0.3</span> Problem 3</a></li>
+  <li><a href="#problem-4" id="toc-problem-4" class="nav-link" data-scroll-target="#problem-4"><span class="header-section-number">0.4</span> Problem 4</a></li>
+  </ul>
+</nav>
+</div>
+<div id="quarto-margin-sidebar" class="sidebar margin-sidebar zindex-bottom">
+</div>
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title">Homework 3</h1>
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    <div>
+    <div class="quarto-title-meta-heading">Author</div>
+    <div class="quarto-title-meta-contents">
+             <p>Mateo Mori </p>
+          </div>
+  </div>
+    
+    <div>
+    <div class="quarto-title-meta-heading">Published</div>
+    <div class="quarto-title-meta-contents">
+      <p class="date">March 7, 2026</p>
+    </div>
+  </div>
+  
+    
+  </div>
+  
+
+
+</header>
+
+
+<p><a href="https://github.com/mateomoribaez-design/ENVS-193DS_homework-03.git" class="uri">https://github.com/mateomoribaez-design/ENVS-193DS_homework-03.git</a></p>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(tidyverse)</span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(here)</span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(janitor)</span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(readxl)  <span class="co"># lead in packages in setup chunk</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb2"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="co"># store salinity data</span></span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>salinity <span class="ot">&lt;-</span> <span class="fu">read_csv</span>(</span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">here</span>(<span class="st">"data"</span>, <span class="st">"salinity-pickleweed.csv"</span>))</span>
+<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a><span class="co"># store personal data</span></span>
+<span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a>my_data <span class="ot">&lt;-</span> <span class="fu">read_csv</span>(</span>
+<span id="cb2-7"><a href="#cb2-7" aria-hidden="true" tabindex="-1"></a>  <span class="fu">here</span>(<span class="st">"data"</span>, <span class="st">"my_data.csv"</span>))</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
+<section id="problem-1" class="level3" data-number="0.1">
+<h3 data-number="0.1" class="anchored" data-anchor-id="problem-1"><span class="header-section-number">0.1</span> Problem 1</h3>
+<section id="a." class="level4" data-number="0.1.1">
+<h4 data-number="0.1.1" class="anchored" data-anchor-id="a."><span class="header-section-number">0.1.1</span> a.</h4>
+<p>The two appropriate tests to use in this scenario are the Pearson correlation and Simple linear regression tests. The pearson correlation test measures strength of association while the simple linear regression test models the response variable as a function of the predictor variable (biomass and salinity respectively).</p>
+</section>
+<section id="b." class="level4" data-number="0.1.2">
+<h4 data-number="0.1.2" class="anchored" data-anchor-id="b."><span class="header-section-number">0.1.2</span> b.</h4>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb3"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(salinity,</span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a>      <span class="fu">aes</span>(<span class="at">x =</span> salinity_mS_cm,</span>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a>        <span class="at">y =</span> pickleweed)) <span class="sc">+</span></span>
+<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_point</span>(<span class="at">color =</span> <span class="st">"darkgreen"</span>, <span class="at">size =</span> <span class="dv">3</span>) <span class="sc">+</span></span>
+<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_smooth</span>(<span class="at">method =</span> <span class="st">"lm"</span>,</span>
+<span id="cb3-6"><a href="#cb3-6" aria-hidden="true" tabindex="-1"></a>              <span class="at">se =</span> <span class="cn">TRUE</span>,</span>
+<span id="cb3-7"><a href="#cb3-7" aria-hidden="true" tabindex="-1"></a>              <span class="at">color =</span> <span class="st">"steelblue"</span>) <span class="sc">+</span></span>
+<span id="cb3-8"><a href="#cb3-8" aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span>(</span>
+<span id="cb3-9"><a href="#cb3-9" aria-hidden="true" tabindex="-1"></a>    <span class="at">x =</span> <span class="st">"Soil Salinity (mS/cm)"</span>,</span>
+<span id="cb3-10"><a href="#cb3-10" aria-hidden="true" tabindex="-1"></a>    <span class="at">y =</span> <span class="st">"Pickleweed Biomass (g)"</span>,</span>
+<span id="cb3-11"><a href="#cb3-11" aria-hidden="true" tabindex="-1"></a>    <span class="at">title =</span> <span class="st">"Relationship Between Soil Salinity and Pickleweed Biomass"</span></span>
+<span id="cb3-12"><a href="#cb3-12" aria-hidden="true" tabindex="-1"></a>  ) <span class="sc">+</span></span>
+<span id="cb3-13"><a href="#cb3-13" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme_minimal</span>()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="Homework-3-Quarto_files/figure-html/unnamed-chunk-3-1.png" class="img-fluid figure-img" width="672"></p>
+</figure>
+</div>
+</div>
+</div>
+</section>
+<section id="c-and-d" class="level4" data-number="0.1.3">
+<h4 data-number="0.1.3" class="anchored" data-anchor-id="c-and-d"><span class="header-section-number">0.1.3</span> c and d</h4>
+</section>
+<section id="checking-assumptions" class="level4" data-number="0.1.4">
+<h4 data-number="0.1.4" class="anchored" data-anchor-id="checking-assumptions"><span class="header-section-number">0.1.4</span> Checking assumptions</h4>
+<p>Linearity</p>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb4"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="fu">plot</span>(salinity<span class="sc">$</span>salinity_mS_cm, <span class="co"># create scatterplot of soil salinity vs pickleweed biomass</span></span>
+<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a>     salinity<span class="sc">$</span>pickleweed,</span>
+<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a>     <span class="at">xlab =</span> <span class="st">"Soil Salinity (mS/cm)"</span>, <span class="co"># label x and y axis</span></span>
+<span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a>     <span class="at">ylab =</span> <span class="st">"Biomass (g)"</span>)</span>
+<span id="cb4-5"><a href="#cb4-5" aria-hidden="true" tabindex="-1"></a>model <span class="ot">&lt;-</span> <span class="fu">lm</span>(pickleweed <span class="sc">~</span> salinity_mS_cm, <span class="at">data =</span> salinity) <span class="co"># fit linear regression model predicting biomass from salinity</span></span>
+<span id="cb4-6"><a href="#cb4-6" aria-hidden="true" tabindex="-1"></a><span class="fu">abline</span>(model, <span class="at">col =</span> <span class="st">"red"</span>) <span class="co"># add fitted regression line to scatterplot</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="Homework-3-Quarto_files/figure-html/unnamed-chunk-4-1.png" class="img-fluid figure-img" width="672"></p>
+</figure>
+</div>
+</div>
+</div>
+<p>I checked the linearity assumption by plotting soil salinity against pickleweed biomass with a scatterplot and a fitted linear regression line. The scatterplot shows an increasing trend with salinity, which suggests that the relationship between salinity and biomass is somewhat linear. I think the linearity assumption is satisfied.</p>
+<p>Normality</p>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb5"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="fu">qqnorm</span>(<span class="fu">residuals</span>(model)) <span class="co"># create qq plot of the model residuals to visually check if they follow a normal distribution</span></span>
+<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a><span class="fu">qqline</span>(<span class="fu">residuals</span>(model), <span class="at">col =</span> <span class="st">"blue"</span>) <span class="co"># Add reference line to qqplot</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="Homework-3-Quarto_files/figure-html/unnamed-chunk-5-1.png" class="img-fluid figure-img" width="672"></p>
+</figure>
+</div>
+</div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb6"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="fu">shapiro.test</span>(<span class="fu">residuals</span>(model)) <span class="co"># use a shapiro-wilk test for normality</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>
+    Shapiro-Wilk normality test
+
+data:  residuals(model)
+W = 0.95126, p-value = 0.3107</code></pre>
+</div>
+</div>
+<p>I checked for normality using both a qqplot and a shapiro-wilk test. The qq plot shows that most data points fall close to the reference line, indicating that the residuals are decently normally distributed. I think that together, these results show that the normality assumption is met.</p>
+<p>Homoscedasticity</p>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb8"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="fu">plot</span>(<span class="fu">fitted</span>(model), <span class="fu">residuals</span>(model), <span class="co"># plot fitted values against model residuals</span></span>
+<span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a>     <span class="at">xlab =</span> <span class="st">"Fitted Values"</span>, <span class="co"># predicted biomass values from the model</span></span>
+<span id="cb8-3"><a href="#cb8-3" aria-hidden="true" tabindex="-1"></a>     <span class="at">ylab =</span> <span class="st">"Residuals"</span>) <span class="co"># difference between observed and predicted values</span></span>
+<span id="cb8-4"><a href="#cb8-4" aria-hidden="true" tabindex="-1"></a><span class="fu">abline</span>(<span class="at">h =</span> <span class="dv">0</span>, <span class="at">col =</span> <span class="st">"red"</span>) <span class="co"># add horizontal reference line</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="Homework-3-Quarto_files/figure-html/unnamed-chunk-6-1.png" class="img-fluid figure-img" width="672"></p>
+</figure>
+</div>
+</div>
+</div>
+<p>I checked for homoscedasticity by plotting residuals against fitted values from the regression model. The points are randomly scattered around the horizontal reference line, without a clear pattern, which suggests that the variance of residuals is constant across predicted values. I think the homoscedasticity assumption is met.</p>
+</section>
+<section id="run-the-test" class="level4" data-number="0.1.5">
+<h4 data-number="0.1.5" class="anchored" data-anchor-id="run-the-test"><span class="header-section-number">0.1.5</span> Run the test</h4>
+<p>Pearson correlation</p>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb9"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="fu">cor.test</span>(salinity<span class="sc">$</span>salinity_mS_cm, <span class="co"># use a Pearson correlation test to measure strength and direction of the relationship between salinity and biomass</span></span>
+<span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a>         salinity<span class="sc">$</span>pickleweed,</span>
+<span id="cb9-3"><a href="#cb9-3" aria-hidden="true" tabindex="-1"></a>         <span class="at">method =</span> <span class="st">"pearson"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>
+    Pearson's product-moment correlation
+
+data:  salinity$salinity_mS_cm and salinity$pickleweed
+t = 2.8979, df = 21, p-value = 0.008605
+alternative hypothesis: true correlation is not equal to 0
+95 percent confidence interval:
+ 0.1568265 0.7757682
+sample estimates:
+      cor 
+0.5344778 </code></pre>
+</div>
+</div>
+<p>To evaluate the strength of the relationship between soil salinity and pickleweed biomass, I used a Pearson correlation test because both variables are continuous. The test output showed a moderate positive correlation between salinity and biomass (r = 0.534, t = 2.898, df = 21, p = 0.0086). The 95% confidence interval for the correlation coefficient ranged from 0.157 to 0.758. With a p-value less than 0.05, we reject the null hypothesis and conclude that there is a significant positive relationship between soil salinity and pickleweed biomass.</p>
+<p>Linear regression (same from above)</p>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb11"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a><span class="fu">summary</span>(model) <span class="co"># display a summary of the linear regression model</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>
+Call:
+lm(formula = pickleweed ~ salinity_mS_cm, data = salinity)
+
+Residuals:
+    Min      1Q  Median      3Q     Max 
+-12.499  -5.819  -1.726   4.794  21.765 
+
+Coefficients:
+               Estimate Std. Error t value Pr(&gt;|t|)   
+(Intercept)     13.0895     4.0350   3.244  0.00389 **
+salinity_mS_cm   2.0832     0.7188   2.898  0.00860 **
+---
+Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1
+
+Residual standard error: 9.144 on 21 degrees of freedom
+Multiple R-squared:  0.2857,    Adjusted R-squared:  0.2517 
+F-statistic: 8.398 on 1 and 21 DF,  p-value: 0.008605</code></pre>
+</div>
+</div>
+<p>I use simple linear regression to model pickleweed biomass as a function of soil salinity. This test shows us how much biomass changes with increasing salinity. The regression outputs show that soil salinity significantly predicts pickleweed biomass (β = 2.083, SE = 0.719, t = 2.898, p = 0.0086). The model intercept was 13.09, showing the predicted biomass when the salinity is zero, and there was a 28.6% variation in biomass (R² = 0.286). Overall, the model was statistically significant (F(1,21) = 8.398, p = 0.0086).</p>
+</section>
+<section id="e." class="level4" data-number="0.1.6">
+<h4 data-number="0.1.6" class="anchored" data-anchor-id="e."><span class="header-section-number">0.1.6</span> e.</h4>
+<p>Our test outcomes suggest that soil salinity significantly affects pickleweed biomass at our restoration site. If biomass declines with increasing salinity, this means that highly saline areas could reduce plant growth. For restoration planning, this means we should plant in moderately saline zones, make soil adjustments for high salinity areas, and monitor the salinity levels in these areas before planting to ensure success.</p>
+</section>
+<section id="f." class="level4" data-number="0.1.7">
+<h4 data-number="0.1.7" class="anchored" data-anchor-id="f."><span class="header-section-number">0.1.7</span> f.&nbsp;</h4>
+<p>I might have ran both tests when I shouldn’t have but I think I’ll leave it in and just answer the second part of 1f.</p>
+<p>Both Pearson correlation and linear regression were conducted, and they both evaluate the same null hypothesis:<br>
+H₀: There&nbsp;is&nbsp;no&nbsp;linear&nbsp;relationship&nbsp;between&nbsp;salinity&nbsp;and&nbsp;biomass</p>
+<p>Because linear regression testing and pearson correlation are equivalent in simpe linear regression, both tests ended up leading to the same comclusion about statistical significance. From the pearson correlation test, the p-value was less than 0.05, which means that we reject the null hypothesis and conclude that there is a significant positive relationship between soil salinity and pickleweed biomass. The linear regression analysis showed that soil salinity significantly predicts pickleweed biomass, which follows what the Pearson’s correlation outputs showed. Above in the descriptions, outputs and interpretation of the tests I have my outputs specified.</p>
+</section>
+</section>
+<section id="problem-2" class="level3" data-number="0.2">
+<h3 data-number="0.2" class="anchored" data-anchor-id="problem-2"><span class="header-section-number">0.2</span> Problem 2</h3>
+<section id="a.-1" class="level4" data-number="0.2.1">
+<h4 data-number="0.2.1" class="anchored" data-anchor-id="a.-1"><span class="header-section-number">0.2.1</span> a.</h4>
+<p>Categorical predictor visualization</p>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb13"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a>my_data <span class="ot">&lt;-</span> <span class="fu">read_csv</span>(<span class="fu">here</span>(<span class="st">"data"</span>, <span class="st">"my_data.csv"</span>)) <span class="sc">|&gt;</span> </span>
+<span id="cb13-2"><a href="#cb13-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">clean_names</span>() <span class="sc">|&gt;</span> <span class="co"># load and clean my data</span></span>
+<span id="cb13-3"><a href="#cb13-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">rename</span>(<span class="at">ocean_activity =</span> <span class="fu">contains</span>(<span class="st">"ocean_activity"</span>)) <span class="sc">|&gt;</span> <span class="co"># give my long ocean activity column a short and usable name</span></span>
+<span id="cb13-4"><a href="#cb13-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(</span>
+<span id="cb13-5"><a href="#cb13-5" aria-hidden="true" tabindex="-1"></a>    <span class="at">daily_workload_hours =</span> <span class="fu">as.numeric</span>(daily_workload_hours), <span class="co"># workload column is treated as a number for the math in this chunk</span></span>
+<span id="cb13-6"><a href="#cb13-6" aria-hidden="true" tabindex="-1"></a>    <span class="at">workload_cat =</span> <span class="fu">case_when</span>( <span class="co"># create new column based on the hour ranges listed below</span></span>
+<span id="cb13-7"><a href="#cb13-7" aria-hidden="true" tabindex="-1"></a>      daily_workload_hours <span class="sc">&lt;=</span> <span class="dv">3</span> <span class="sc">~</span> <span class="st">"Low (&lt; 3 hours)"</span>,</span>
+<span id="cb13-8"><a href="#cb13-8" aria-hidden="true" tabindex="-1"></a>      daily_workload_hours <span class="sc">&lt;=</span> <span class="dv">7</span> <span class="sc">~</span> <span class="st">"Medium (3-7 hours)"</span>,</span>
+<span id="cb13-9"><a href="#cb13-9" aria-hidden="true" tabindex="-1"></a>      daily_workload_hours <span class="sc">&gt;</span> <span class="dv">7</span> <span class="sc">~</span> <span class="st">"High (&gt;7 hours)"</span></span>
+<span id="cb13-10"><a href="#cb13-10" aria-hidden="true" tabindex="-1"></a>    ),</span>
+<span id="cb13-11"><a href="#cb13-11" aria-hidden="true" tabindex="-1"></a>    <span class="at">workload_cat =</span> <span class="fu">factor</span>(workload_cat, <span class="at">levels =</span> <span class="fu">c</span>(<span class="st">"Low (&lt; 3 hours)"</span>, <span class="st">"Medium (3-7 hours)"</span>, <span class="st">"High (&gt;7 hours)"</span>)) <span class="co"># convert workload_cat to a factor</span></span>
+<span id="cb13-12"><a href="#cb13-12" aria-hidden="true" tabindex="-1"></a>  )</span>
+<span id="cb13-13"><a href="#cb13-13" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb13-14"><a href="#cb13-14" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(my_data, <span class="fu">aes</span>(<span class="at">x =</span> workload_cat, <span class="at">fill =</span> ocean_activity2)) <span class="sc">+</span> <span class="co"># create histogram visualization</span></span>
+<span id="cb13-15"><a href="#cb13-15" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_bar</span>(<span class="at">position =</span> <span class="st">"dodge"</span>) <span class="sc">+</span> <span class="co"># create side-by-side bars for each activity within the workload groups</span></span>
+<span id="cb13-16"><a href="#cb13-16" aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span>( <span class="co"># add descriptive labels to the title and axes</span></span>
+<span id="cb13-17"><a href="#cb13-17" aria-hidden="true" tabindex="-1"></a>    <span class="at">title =</span> <span class="st">"Ocean Activities by Daily Workload"</span>,</span>
+<span id="cb13-18"><a href="#cb13-18" aria-hidden="true" tabindex="-1"></a>    <span class="at">x =</span> <span class="st">"Daily Workload Category (hours)"</span>,</span>
+<span id="cb13-19"><a href="#cb13-19" aria-hidden="true" tabindex="-1"></a>    <span class="at">y =</span> <span class="st">"Count of Ocean Activities"</span>,</span>
+<span id="cb13-20"><a href="#cb13-20" aria-hidden="true" tabindex="-1"></a>    <span class="at">fill =</span> <span class="st">"Ocean Activity"</span></span>
+<span id="cb13-21"><a href="#cb13-21" aria-hidden="true" tabindex="-1"></a>  ) <span class="sc">+</span></span>
+<span id="cb13-22"><a href="#cb13-22" aria-hidden="true" tabindex="-1"></a>  <span class="fu">scale_fill_brewer</span>(<span class="at">palette =</span> <span class="st">"Set2"</span>) <span class="sc">+</span> <span class="co"># apply palette</span></span>
+<span id="cb13-23"><a href="#cb13-23" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme_minimal</span>() <span class="co"># change background theme</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="Homework-3-Quarto_files/figure-html/unnamed-chunk-9-1.png" class="img-fluid figure-img" width="672"></p>
+</figure>
+</div>
+</div>
+</div>
+<p>Continuous predictor visualization</p>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb14"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb14-1"><a href="#cb14-1" aria-hidden="true" tabindex="-1"></a>my_jitter_data <span class="ot">&lt;-</span> <span class="fu">read_csv</span>(<span class="fu">here</span>(<span class="st">"data"</span>, <span class="st">"my_data.csv"</span>)) <span class="sc">|&gt;</span> <span class="co"># read in data</span></span>
+<span id="cb14-2"><a href="#cb14-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">clean_names</span>() <span class="sc">|&gt;</span> <span class="co"># clean column names</span></span>
+<span id="cb14-3"><a href="#cb14-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">rename</span>(<span class="at">ocean =</span> <span class="fu">contains</span>(<span class="st">"ocean_activity"</span>)) <span class="sc">|&gt;</span> <span class="co"># Rename the long activity column to 'ocean' for the y-axis</span></span>
+<span id="cb14-4"><a href="#cb14-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(</span>
+<span id="cb14-5"><a href="#cb14-5" aria-hidden="true" tabindex="-1"></a>    <span class="at">ocean =</span> <span class="fu">case_when</span>(</span>
+<span id="cb14-6"><a href="#cb14-6" aria-hidden="true" tabindex="-1"></a>      ocean <span class="sc">%in%</span> <span class="fu">c</span>(<span class="st">"none"</span>, <span class="st">"None"</span>, <span class="st">"No"</span>, <span class="st">"no"</span>) <span class="sc">~</span> <span class="st">"No"</span>, <span class="co"># if the value is "none", "None", or "No", label it as "No"</span></span>
+<span id="cb14-7"><a href="#cb14-7" aria-hidden="true" tabindex="-1"></a>      <span class="cn">TRUE</span> <span class="sc">~</span> <span class="st">"Yes"</span> <span class="co"># anything other than no shall be yes</span></span>
+<span id="cb14-8"><a href="#cb14-8" aria-hidden="true" tabindex="-1"></a>    ),</span>
+<span id="cb14-9"><a href="#cb14-9" aria-hidden="true" tabindex="-1"></a>    <span class="at">daily_workload_hours =</span> <span class="fu">as.numeric</span>(daily_workload_hours)) <span class="co"># ensure workload column is treated as numerical values</span></span>
+<span id="cb14-10"><a href="#cb14-10" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(<span class="at">data =</span> my_jitter_data, <span class="co"># create scatterplot visualization</span></span>
+<span id="cb14-11"><a href="#cb14-11" aria-hidden="true" tabindex="-1"></a>       <span class="fu">aes</span>(<span class="at">x =</span> daily_workload_hours, <span class="at">y =</span> ocean)) <span class="sc">+</span> <span class="co"># use the cleaned up column names</span></span>
+<span id="cb14-12"><a href="#cb14-12" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_jitter</span>( <span class="co"># add jittered points to scatterplot</span></span>
+<span id="cb14-13"><a href="#cb14-13" aria-hidden="true" tabindex="-1"></a>    <span class="at">width =</span> <span class="dv">0</span>,   <span class="co"># no horizontal jitter, we want the points to stay on their daily workload hours</span></span>
+<span id="cb14-14"><a href="#cb14-14" aria-hidden="true" tabindex="-1"></a>    <span class="at">height =</span> <span class="fl">0.1</span> <span class="co"># jitter points slightly in the vertical direction</span></span>
+<span id="cb14-15"><a href="#cb14-15" aria-hidden="true" tabindex="-1"></a>  ) <span class="sc">+</span></span>
+<span id="cb14-16"><a href="#cb14-16" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme_minimal</span>() <span class="sc">+</span> <span class="co"># change theme</span></span>
+<span id="cb14-17"><a href="#cb14-17" aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span>(</span>
+<span id="cb14-18"><a href="#cb14-18" aria-hidden="true" tabindex="-1"></a>    <span class="at">title =</span> <span class="st">"Ocean-Going against Daily Workload"</span>, <span class="co"># use adequate x and y axes labels</span></span>
+<span id="cb14-19"><a href="#cb14-19" aria-hidden="true" tabindex="-1"></a>    <span class="at">x =</span> <span class="st">"Daily Workload (hours)"</span>,</span>
+<span id="cb14-20"><a href="#cb14-20" aria-hidden="true" tabindex="-1"></a>    <span class="at">y =</span> <span class="st">"Went in Ocean (Yes/No)"</span></span>
+<span id="cb14-21"><a href="#cb14-21" aria-hidden="true" tabindex="-1"></a>  )</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="Homework-3-Quarto_files/figure-html/unnamed-chunk-10-1.png" class="img-fluid figure-img" width="672"></p>
+</figure>
+</div>
+</div>
+</div>
+</section>
+<section id="b.-1" class="level4" data-number="0.2.2">
+<h4 data-number="0.2.2" class="anchored" data-anchor-id="b.-1"><span class="header-section-number">0.2.2</span> b.</h4>
+<p>Figure 1: Categorical Predictor Visualization</p>
+<p>Figure 1: Frequency of Ocean Activity Types by Daily Workload Categories. This bar chart shows how different types of ocean activity are distributed across three different workload levels: Low( &lt; 3 hrs), Medium (3-7 hrs), and High ( &gt; 7 hrs). The chart shows that the highest volume and variety of ocean activities occurs on low workload days, with longboarding being the most frequent activity in that category. On the other hand, as workload hours increase, ocean activity is only quick dips.</p>
+<p>Figure 2: Continuous Predictor Visualization</p>
+<p>Figure 2: Daily Ocean Participation Relative to Continuous Workload Hours. This scatter plot shows the relationship between the specific number of hours worked in a day and the binary outcome of whether or not an ocean activity took place.</p>
+</section>
+</section>
+<section id="problem-3" class="level3" data-number="0.3">
+<h3 data-number="0.3" class="anchored" data-anchor-id="problem-3"><span class="header-section-number">0.3</span> Problem 3</h3>
+<section id="a.-2" class="level4" data-number="0.3.1">
+<h4 data-number="0.3.1" class="anchored" data-anchor-id="a.-2"><span class="header-section-number">0.3.1</span> a.</h4>
+<p>My affective visualization could show a shoreline where my academics and personal lives are vaguely summarized. The “No” dots are shown in the bottom of the chart, representing the sand, and the “yes” dots are shown above, representing an ocean line. The markings, gridlines, axes, and wording could all be symbolically replaced with things like a horizon, a sun, some birds, and maybe some fish. Adding details like rocks in the sand and sea spray on the ocean could be my way of depicting the data points in the graph without using actual data points in R.</p>
+</section>
+<section id="b.-2" class="level4" data-number="0.3.2">
+<h4 data-number="0.3.2" class="anchored" data-anchor-id="b.-2"><span class="header-section-number">0.3.2</span> b.</h4>
+<p><img src="images/clipboard-731790774.jpeg" class="img-fluid"></p>
+</section>
+<section id="c." class="level4" data-number="0.3.3">
+<h4 data-number="0.3.3" class="anchored" data-anchor-id="c."><span class="header-section-number">0.3.3</span> c.&nbsp;</h4>
+<p>My drawing isn’t very great, I might end up doing a canva illustration for my final, or use sketches to make better components like the shark fins and the bird. I also know that with better coloring tools I can color the ocean and sand in much better.</p>
+<p><img src="images/clipboard-2481209428.jpeg" class="img-fluid"></p>
+</section>
+<section id="d." class="level4" data-number="0.3.4">
+<h4 data-number="0.3.4" class="anchored" data-anchor-id="d."><span class="header-section-number">0.3.4</span> d.&nbsp;</h4>
+<ul>
+<li><p>This piece visualizes the intersection of my daily academic workload and my personal connection to the ocean, as a surfer, scuba diver, and beach enjoyer. It shows the weight that daily workload carries. It either creates a barrier to or allows for ocean activity.</p></li>
+<li><p>My primary influence was by artists like Jill Pelto, in the way that amongst beautiful art there are intricate designs purposefully woven into the same imagery as the art. Very small details that once noticed are the only thing I could look at after that. Colors I am familiar with watching the sunset in devs, I have all the colors I could possibly need.</p></li>
+<li><p>My work takes the form of a drawn beach-to-ocean density rug, showing the point densities in the different workload hours. This visualization comes from the use of a binary y-axis (yes or no) and a continuous x-axis (hours), which helps to create a minimalist landscape, and showing the two different worlds (on land vs in the ocean) with a santa barbara sunset in the background makes it all come together.</p></li>
+<li><p>To create this work, I had to toy around with a few different forms of data visualization, and chose the one that best fit the kind of scenery I wanted to portray. Realizing that I wanted to show the moments of work and the moments of play made the content of my drawing much clearer. Whether there are sharks in the water or a few rocks on the beach, I know what they mean to me.</p></li>
+</ul>
+</section>
+<section id="e.-1" class="level4" data-number="0.3.5">
+<h4 data-number="0.3.5" class="anchored" data-anchor-id="e.-1"><span class="header-section-number">0.3.5</span> e.</h4>
+<p><a href="https://docs.google.com/presentation/d/1XtyvX6DUrVWrqS2RsWbTT6DOsHsXRGo64dZoxWcBFqY/edit?usp=sharing" class="uri">https://docs.google.com/presentation/d/1XtyvX6DUrVWrqS2RsWbTT6DOsHsXRGo64dZoxWcBFqY/edit?usp=sharing</a></p>
+</section>
+</section>
+<section id="problem-4" class="level3" data-number="0.4">
+<h3 data-number="0.4" class="anchored" data-anchor-id="problem-4"><span class="header-section-number">0.4</span> Problem 4</h3>
+<section id="a.-3" class="level4" data-number="0.4.1">
+<h4 data-number="0.4.1" class="anchored" data-anchor-id="a.-3"><span class="header-section-number">0.4.1</span> a.</h4>
+<p>The statistical tests that the authors used are linear regression analysis and t-test. They use these to evaluate the body weight (W) and total length (L) relationships of 47 fish species. These tests calculate regression coefficients and the coefficient of determination to check if species show isometric or allometric growth. The summary table and histogram in the article are used to display the distribution of these growth types and the biological condition of native vs invasive populations.<img src="images/clipboard-3404324976.png" class="img-fluid"></p>
+</section>
+<section id="b.-3" class="level4" data-number="0.4.2">
+<h4 data-number="0.4.2" class="anchored" data-anchor-id="b.-3"><span class="header-section-number">0.4.2</span> b.</h4>
+<p>The large summary table represents the data accurately but is missing immediate visual clarity, there is some time that must be invested before getting a general understanding. It includes 47 rows of regression statistics without clear visuals that explain where these values come from, or if they represent native or invasive species.</p>
+</section>
+<section id="c.-1" class="level4" data-number="0.4.3">
+<h4 data-number="0.4.3" class="anchored" data-anchor-id="c.-1"><span class="header-section-number">0.4.3</span> c.&nbsp;</h4>
+<p>The summary table most likely has a low data to ink ratio due to the uniform presentation of five distinct statistical columns for almost fifty species. This overwhelms the reader with visual clutter. The absence of distinctive columns don’t help highlight significant results, which ends up as a lack of visual aesthetics.</p>
+</section>
+<section id="d.-1" class="level4" data-number="0.4.4">
+<h4 data-number="0.4.4" class="anchored" data-anchor-id="d.-1"><span class="header-section-number">0.4.4</span> d.&nbsp;</h4>
+<p>To improve the table, I would tell the authors to group species by their respective categories (zooplanktivores vs carnivores, etc.) and use bolding to emphasize species with alarming allometric growth or higher than usual condition factors. For an alternative statistical figure, I would recommend that they use a scatter plot with regression lines to show the native vs invasive species. This would better illustrate the underlying length-weight relationship that the current figures only summarize in groups. This would make the visualization of that relationship much clearer for the reader.</p>
+</section>
+</section>
+
+</main>
+<!-- /main column -->
+<script id="quarto-html-after-body" type="application/javascript">
+  window.document.addEventListener("DOMContentLoaded", function (event) {
+    const icon = "";
+    const anchorJS = new window.AnchorJS();
+    anchorJS.options = {
+      placement: 'right',
+      icon: icon
+    };
+    anchorJS.add('.anchored');
+    const isCodeAnnotation = (el) => {
+      for (const clz of el.classList) {
+        if (clz.startsWith('code-annotation-')) {                     
+          return true;
+        }
+      }
+      return false;
+    }
+    const onCopySuccess = function(e) {
+      // button target
+      const button = e.trigger;
+      // don't keep focus
+      button.blur();
+      // flash "checked"
+      button.classList.add('code-copy-button-checked');
+      var currentTitle = button.getAttribute("title");
+      button.setAttribute("title", "Copied!");
+      let tooltip;
+      if (window.bootstrap) {
+        button.setAttribute("data-bs-toggle", "tooltip");
+        button.setAttribute("data-bs-placement", "left");
+        button.setAttribute("data-bs-title", "Copied!");
+        tooltip = new bootstrap.Tooltip(button, 
+          { trigger: "manual", 
+            customClass: "code-copy-button-tooltip",
+            offset: [0, -8]});
+        tooltip.show();    
+      }
+      setTimeout(function() {
+        if (tooltip) {
+          tooltip.hide();
+          button.removeAttribute("data-bs-title");
+          button.removeAttribute("data-bs-toggle");
+          button.removeAttribute("data-bs-placement");
+        }
+        button.setAttribute("title", currentTitle);
+        button.classList.remove('code-copy-button-checked');
+      }, 1000);
+      // clear code selection
+      e.clearSelection();
+    }
+    const getTextToCopy = function(trigger) {
+      const outerScaffold = trigger.parentElement.cloneNode(true);
+      const codeEl = outerScaffold.querySelector('code');
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+    }
+    const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+      text: getTextToCopy
+    });
+    clipboard.on('success', onCopySuccess);
+    if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+      const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+        text: getTextToCopy,
+        container: window.document.getElementById('quarto-embedded-source-code-modal')
+      });
+      clipboardModal.on('success', onCopySuccess);
+    }
+      var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+      var mailtoRegex = new RegExp(/^mailto:/);
+        var filterRegex = new RegExp('/' + window.location.host + '/');
+      var isInternal = (href) => {
+          return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+      }
+      // Inspect non-navigation links and adorn them if external
+     var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+      for (var i=0; i<links.length; i++) {
+        const link = links[i];
+        if (!isInternal(link.href)) {
+          // undo the damage that might have been done by quarto-nav.js in the case of
+          // links that we want to consider external
+          if (link.dataset.originalHref !== undefined) {
+            link.href = link.dataset.originalHref;
+          }
+        }
+      }
+    function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+      const config = {
+        allowHTML: true,
+        maxWidth: 500,
+        delay: 100,
+        arrow: false,
+        appendTo: function(el) {
+            return el.parentElement;
+        },
+        interactive: true,
+        interactiveBorder: 10,
+        theme: 'quarto',
+        placement: 'bottom-start',
+      };
+      if (contentFn) {
+        config.content = contentFn;
+      }
+      if (onTriggerFn) {
+        config.onTrigger = onTriggerFn;
+      }
+      if (onUntriggerFn) {
+        config.onUntrigger = onUntriggerFn;
+      }
+      window.tippy(el, config); 
+    }
+    const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+    for (var i=0; i<noterefs.length; i++) {
+      const ref = noterefs[i];
+      tippyHover(ref, function() {
+        // use id or data attribute instead here
+        let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+        try { href = new URL(href).hash; } catch {}
+        const id = href.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note) {
+          return note.innerHTML;
+        } else {
+          return "";
+        }
+      });
+    }
+    const xrefs = window.document.querySelectorAll('a.quarto-xref');
+    const processXRef = (id, note) => {
+      // Strip column container classes
+      const stripColumnClz = (el) => {
+        el.classList.remove("page-full", "page-columns");
+        if (el.children) {
+          for (const child of el.children) {
+            stripColumnClz(child);
+          }
+        }
+      }
+      stripColumnClz(note)
+      if (id === null || id.startsWith('sec-')) {
+        // Special case sections, only their first couple elements
+        const container = document.createElement("div");
+        if (note.children && note.children.length > 2) {
+          container.appendChild(note.children[0].cloneNode(true));
+          for (let i = 1; i < note.children.length; i++) {
+            const child = note.children[i];
+            if (child.tagName === "P" && child.innerText === "") {
+              continue;
+            } else {
+              container.appendChild(child.cloneNode(true));
+              break;
+            }
+          }
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(container);
+          }
+          return container.innerHTML
+        } else {
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(note);
+          }
+          return note.innerHTML;
+        }
+      } else {
+        // Remove any anchor links if they are present
+        const anchorLink = note.querySelector('a.anchorjs-link');
+        if (anchorLink) {
+          anchorLink.remove();
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        if (note.classList.contains("callout")) {
+          return note.outerHTML;
+        } else {
+          return note.innerHTML;
+        }
+      }
+    }
+    for (var i=0; i<xrefs.length; i++) {
+      const xref = xrefs[i];
+      tippyHover(xref, undefined, function(instance) {
+        instance.disable();
+        let url = xref.getAttribute('href');
+        let hash = undefined; 
+        if (url.startsWith('#')) {
+          hash = url;
+        } else {
+          try { hash = new URL(url).hash; } catch {}
+        }
+        if (hash) {
+          const id = hash.replace(/^#\/?/, "");
+          const note = window.document.getElementById(id);
+          if (note !== null) {
+            try {
+              const html = processXRef(id, note.cloneNode(true));
+              instance.setContent(html);
+            } finally {
+              instance.enable();
+              instance.show();
+            }
+          } else {
+            // See if we can fetch this
+            fetch(url.split('#')[0])
+            .then(res => res.text())
+            .then(html => {
+              const parser = new DOMParser();
+              const htmlDoc = parser.parseFromString(html, "text/html");
+              const note = htmlDoc.getElementById(id);
+              if (note !== null) {
+                const html = processXRef(id, note);
+                instance.setContent(html);
+              } 
+            }).finally(() => {
+              instance.enable();
+              instance.show();
+            });
+          }
+        } else {
+          // See if we can fetch a full url (with no hash to target)
+          // This is a special case and we should probably do some content thinning / targeting
+          fetch(url)
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.querySelector('main.content');
+            if (note !== null) {
+              // This should only happen for chapter cross references
+              // (since there is no id in the URL)
+              // remove the first header
+              if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+                note.children[0].remove();
+              }
+              const html = processXRef(null, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      }, function(instance) {
+      });
+    }
+        let selectedAnnoteEl;
+        const selectorForAnnotation = ( cell, annotation) => {
+          let cellAttr = 'data-code-cell="' + cell + '"';
+          let lineAttr = 'data-code-annotation="' +  annotation + '"';
+          const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+          return selector;
+        }
+        const selectCodeLines = (annoteEl) => {
+          const doc = window.document;
+          const targetCell = annoteEl.getAttribute("data-target-cell");
+          const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+          const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+          const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+          const lineIds = lines.map((line) => {
+            return targetCell + "-" + line;
+          })
+          let top = null;
+          let height = null;
+          let parent = null;
+          if (lineIds.length > 0) {
+              //compute the position of the single el (top and bottom and make a div)
+              const el = window.document.getElementById(lineIds[0]);
+              top = el.offsetTop;
+              height = el.offsetHeight;
+              parent = el.parentElement.parentElement;
+            if (lineIds.length > 1) {
+              const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+              const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+              height = bottom - top;
+            }
+            if (top !== null && height !== null && parent !== null) {
+              // cook up a div (if necessary) and position it 
+              let div = window.document.getElementById("code-annotation-line-highlight");
+              if (div === null) {
+                div = window.document.createElement("div");
+                div.setAttribute("id", "code-annotation-line-highlight");
+                div.style.position = 'absolute';
+                parent.appendChild(div);
+              }
+              div.style.top = top - 2 + "px";
+              div.style.height = height + 4 + "px";
+              div.style.left = 0;
+              let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+              if (gutterDiv === null) {
+                gutterDiv = window.document.createElement("div");
+                gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+                gutterDiv.style.position = 'absolute';
+                const codeCell = window.document.getElementById(targetCell);
+                const gutter = codeCell.querySelector('.code-annotation-gutter');
+                gutter.appendChild(gutterDiv);
+              }
+              gutterDiv.style.top = top - 2 + "px";
+              gutterDiv.style.height = height + 4 + "px";
+            }
+            selectedAnnoteEl = annoteEl;
+          }
+        };
+        const unselectCodeLines = () => {
+          const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+          elementsIds.forEach((elId) => {
+            const div = window.document.getElementById(elId);
+            if (div) {
+              div.remove();
+            }
+          });
+          selectedAnnoteEl = undefined;
+        };
+          // Handle positioning of the toggle
+      window.addEventListener(
+        "resize",
+        throttle(() => {
+          elRect = undefined;
+          if (selectedAnnoteEl) {
+            selectCodeLines(selectedAnnoteEl);
+          }
+        }, 10)
+      );
+      function throttle(fn, ms) {
+      let throttle = false;
+      let timer;
+        return (...args) => {
+          if(!throttle) { // first call gets through
+              fn.apply(this, args);
+              throttle = true;
+          } else { // all the others get throttled
+              if(timer) clearTimeout(timer); // cancel #2
+              timer = setTimeout(() => {
+                fn.apply(this, args);
+                timer = throttle = false;
+              }, ms);
+          }
+        };
+      }
+        // Attach click handler to the DT
+        const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+        for (const annoteDlNode of annoteDls) {
+          annoteDlNode.addEventListener('click', (event) => {
+            const clickedEl = event.target;
+            if (clickedEl !== selectedAnnoteEl) {
+              unselectCodeLines();
+              const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+              if (activeEl) {
+                activeEl.classList.remove('code-annotation-active');
+              }
+              selectCodeLines(clickedEl);
+              clickedEl.classList.add('code-annotation-active');
+            } else {
+              // Unselect the line
+              unselectCodeLines();
+              clickedEl.classList.remove('code-annotation-active');
+            }
+          });
+        }
+    const findCites = (el) => {
+      const parentEl = el.parentElement;
+      if (parentEl) {
+        const cites = parentEl.dataset.cites;
+        if (cites) {
+          return {
+            el,
+            cites: cites.split(' ')
+          };
+        } else {
+          return findCites(el.parentElement)
+        }
+      } else {
+        return undefined;
+      }
+    };
+    var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+    for (var i=0; i<bibliorefs.length; i++) {
+      const ref = bibliorefs[i];
+      const citeInfo = findCites(ref);
+      if (citeInfo) {
+        tippyHover(citeInfo.el, function() {
+          var popup = window.document.createElement('div');
+          citeInfo.cites.forEach(function(cite) {
+            var citeDiv = window.document.createElement('div');
+            citeDiv.classList.add('hanging-indent');
+            citeDiv.classList.add('csl-entry');
+            var biblioDiv = window.document.getElementById('ref-' + cite);
+            if (biblioDiv) {
+              citeDiv.innerHTML = biblioDiv.innerHTML;
+            }
+            popup.appendChild(citeDiv);
+          });
+          return popup.innerHTML;
+        });
+      }
+    }
+  });
+  </script>
+</div> <!-- /content -->
+
+
+
+
+</body></html>

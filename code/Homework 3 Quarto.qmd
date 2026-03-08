@@ -1,12 +1,14 @@
 ---
-title: "Homework 3 Quarto"
-format: pdf
-editor: visual
-html:
+title: "Homework 3"
+author: "Mateo Mori"
+date: 3/7/26
+format: 
+  html:
     toc: true
     toc-depth: 3
-    toc-location: left
     toc-float: true
+    toc-location: left
+    number-sections: true
 ---
 
 <https://github.com/mateomoribaez-design/ENVS-193DS_homework-03.git>
@@ -21,6 +23,8 @@ library(readxl)  # lead in packages in setup chunk
 ```
 
 ```{r}
+#| message: false
+#| warning: false
 # store salinity data
 salinity <- read_csv(
   here("data", "salinity-pickleweed.csv"))
@@ -66,6 +70,8 @@ ggplot(salinity,
 Linearity
 
 ```{r}
+#| message: false
+#| warning: false
 plot(salinity$salinity_mS_cm, # create scatterplot of soil salinity vs pickleweed biomass
      salinity$pickleweed,
      xlab = "Soil Salinity (mS/cm)", # label x and y axis
@@ -79,6 +85,8 @@ I checked the linearity assumption by plotting soil salinity against pickleweed 
 Normality
 
 ```{r}
+#| message: false
+#| warning: false
 qqnorm(residuals(model)) # create qq plot of the model residuals to visually check if they follow a normal distribution
 qqline(residuals(model), col = "blue") # Add reference line to qqplot
 
@@ -90,6 +98,8 @@ I checked for normality using both a qqplot and a shapiro-wilk test. The qq plot
 Homoscedasticity
 
 ```{r}
+#| message: false
+#| warning: false
 plot(fitted(model), residuals(model), # plot fitted values against model residuals
      xlab = "Fitted Values", # predicted biomass values from the model
      ylab = "Residuals") # difference between observed and predicted values
@@ -103,6 +113,8 @@ I checked for homoscedasticity by plotting residuals against fitted values from 
 Pearson correlation
 
 ```{r}
+#| message: false
+#| warning: false
 cor.test(salinity$salinity_mS_cm, # use a Pearson correlation test to measure strength and direction of the relationship between salinity and biomass
          salinity$pickleweed,
          method = "pearson")
@@ -113,6 +125,8 @@ To evaluate the strength of the relationship between soil salinity and picklewee
 Linear regression (same from above)
 
 ```{r}
+#| message: false
+#| warning: false
 summary(model) # display a summary of the linear regression model
 ```
 
@@ -138,6 +152,8 @@ Because linear regression testing and pearson correlation are equivalent in simp
 Categorical predictor visualization
 
 ```{r}
+#| message: false
+#| warning: false
 my_data <- read_csv(here("data", "my_data.csv")) |> 
   clean_names() |> # load and clean my data
   rename(ocean_activity = contains("ocean_activity")) |> # give my long ocean activity column a short and usable name
@@ -166,6 +182,8 @@ ggplot(my_data, aes(x = workload_cat, fill = ocean_activity2)) + # create histog
 Continuous predictor visualization
 
 ```{r}
+#| message: false
+#| warning: false
 my_jitter_data <- read_csv(here("data", "my_data.csv")) |> # read in data
   clean_names() |> # clean column names
   rename(ocean = contains("ocean_activity")) |> # Rename the long activity column to 'ocean' for the y-axis
