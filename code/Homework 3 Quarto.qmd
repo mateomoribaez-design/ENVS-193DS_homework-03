@@ -34,6 +34,8 @@ The two appropriate tests to use in this scenario are the Pearson correlation an
 #### b.
 
 ```{r}
+#| message: false
+#| warning: false
 
 ggplot(salinity,
       aes(x = salinity_mS_cm,
@@ -209,3 +211,27 @@ My drawing isn't very great, I might end up doing a canva illustration for my fi
 ![](images/clipboard-2481209428.jpeg)
 
 #### d. 
+
+-   This piece visualizes the intersection of my daily academic workload and my personal connection to the ocean, as a surfer, scuba diver, and beach enjoyer. It shows the weight that daily workload carries. It either creates a barrier to or allows for ocean activity.
+
+-   My primary influence was by artists like Jill Pelto, in the way that amongst beautiful art there are intricate designs purposefully woven into the same imagery as the art. Very small details that once noticed are the only thing I could look at after that. Colors I am familiar with watching the sunset in devs, I have all the colors I could possibly need.
+
+-   My work takes the form of a drawn beach-to-ocean density rug, showing the point densities in the different workload hours. This visualization comes from the use of a binary y-axis (yes or no) and a continuous x-axis (hours), which helps to create a minimalist landscape, and showing the two different worlds (on land vs in the ocean) with a santa barbara sunset in the background makes it all come together.
+
+-   To create this work, I had to toy around with a few different forms of data visualization, and chose the one that best fit the kind of scenery I wanted to portray. Realizing that I wanted to show the moments of work and the moments of play made the content of my drawing much clearer. Whether there are sharks in the water or a few rocks on the beach, I know what they mean to me.
+
+#### e. 
+
+<https://docs.google.com/presentation/d/1XtyvX6DUrVWrqS2RsWbTT6DOsHsXRGo64dZoxWcBFqY/edit?usp=sharing>
+
+### Problem 4
+
+#### a.
+
+The statistical tests that the authors used are linear regression analysis and t-test. They use these to evaluate the body weight (W) and total length (L) relationships of 47 fish species. These tests calculate regression coefficients and the coefficient of determination to check if species show isometric or allometric growth. The summary table and histogram in the article are used to display the distribution of these growth types and the biological condition of native vs invasive populations.
+
+#### b.
+
+The large summary table represents the data accurately but is missing immediate visual clarity, there is some time that must be invested before getting a general understanding. It includes 47 rows of regression statistics without clear visuals that explain where these values come from, or if they represent native or invasive species. The histogram shows the frequency of specific growth types across all species, but it does not specifically show the model predictions or the standard errors mentioned in the text. Adding on, to understand the "Condition Factor," the reader has to manually cross-reference the table and text.
+
+#### c. 
