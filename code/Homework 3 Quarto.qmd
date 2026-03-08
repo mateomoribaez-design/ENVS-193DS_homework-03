@@ -22,7 +22,7 @@ salinity <- read_csv(
 
 # store personal data
 my_data <- read_csv(
-  here("data", "My_data.csv"))
+  here("data", "my_data.csv"))
 ```
 
 ### Problem 1
@@ -110,3 +110,77 @@ summary(model) # display a summary of the linear regression model
 ```
 
 I use simple linear regression to model pickleweed biomass as a function of soil salinity. This test shows us how much biomass changes with increasing salinity. The regression outputs show that soil salinity significantly predicts pickleweed biomass (β = 2.083, SE = 0.719, t = 2.898, p = 0.0086). The model intercept was 13.09, showing the predicted biomass when the salinity is zero, and there was a 28.6% variation in biomass (R² = 0.286). Overall, the model was statistically significant (F(1,21) = 8.398, p = 0.0086).
+
+#### e.
+
+Our test outcomes suggest that soil salinity significantly affects pickleweed biomass at our restoration site. If biomass declines with increasing salinity, this means that highly saline areas could reduce plant growth. For restoration planning, this means we should plant in moderately saline zones, make soil adjustments for high salinity areas, and monitor the salinity levels in these areas before planting to ensure success.
+
+#### f. 
+
+I might have ran both tests when I shouldn't have but I think I'll leave it in and just answer the second part of 1f.
+
+Both Pearson correlation and linear regression were conducted, and they both evaluate the same null hypothesis:\
+H₀: There is no linear relationship between salinity and biomass
+
+Because linear regression testing and pearson correlation are equivalent in simpe linear regression, both tests ended up leading to the same comclusion about statistical significance. From the pearson correlation test, the p-value was less than 0.05, which means that we reject the null hypothesis and conclude that there is a significant positive relationship between soil salinity and pickleweed biomass. The linear regression analysis showed that soil salinity significantly predicts pickleweed biomass, which follows what the Pearson's correlation outputs showed. Above in the descriptions, outputs and interpretation of the tests I have my outputs specified.
+
+### Problem 2
+
+#### a. 
+
+Categorical predictor visualization
+
+```{r}
+my_data <- read_csv(here("data", "my_data.csv")) |> 
+  clean_names() |> # load and clean my data
+  rename(ocean_activity = contains("ocean_activity")) |> # give my long ocean activity column a short and usable name
+  filter(!ocean_activity2 %in% c("none")) |> # remove rows where the activity is none because none is a significant part of the data
+  mutate(
+    daily_workload_hours = as.numeric(daily_workload_hours), # workload column is treated as a number for the math in this chunk
+    workload_cat = case_when( # create new column based on the hour ranges listed below
+      daily_workload_hours <= 3 ~ "Low (< 3 hours)",
+      daily_workload_hours <= 7 ~ "Medium (3-7 hours)",
+      daily_workload_hours > 7 ~ "High (>7 hours)"
+    ),
+    workload_cat = factor(workload_cat, levels = c("Low (< 3 hours)", "Medium (3-7 hours)", "High (>7 hours)")) # convert workload_cat to a factor
+  )
+
+ggplot(my_data, aes(x = workload_cat, fill = ocean_activity2)) + # create histogram visualization
+  geom_bar(position = "dodge") + # create side-by-side bars for each activity within the workload groups
+  labs( # add descriptive labels to the title and axes
+    title = "Ocean Activities by Daily Workload",
+    x = "Daily Workload Category (hours)",
+    y = "Count of Ocean Activities",
+    fill = "Ocean Activity"
+  ) +
+  scale_fill_brewer(palette = "Set2") + # apply palette
+  theme_minimal() # change background theme
+```
+
+Continuous predictor visualization
+
+```{r}
+my_jitter_data <- read_csv(here("data", "my_data.csv")) |> # read in data
+  clean_names() |> # clean column names
+  rename(ocean = contains("ocean_activity")) |> # Rename the long activity column to 'ocean' for the y-axis
+  mutate(
+    ocean = case_when(
+      ocean %in% c("none", "None", "No", "no") ~ "No", # if the value is "none", "None", or "No", label it as "No"
+      TRUE ~ "Yes" # anything other than no shall be yes
+    ),
+    daily_workload_hours = as.numeric(daily_workload_hours)) # ensure workload column is treated as numerical values
+ggplot(data = my_jitter_data, # create scatterplot visualization
+       aes(x = daily_workload_hours, y = ocean)) + # use the cleaned up column names
+  geom_jitter( # add jittered points to scatterplot
+    width = 0,   # no horizontal jitter, we want the points to stay on their daily workload hours
+    height = 0.1 # jitter points slightly in the vertical direction
+  ) +
+  theme_minimal() + # change theme
+  labs(
+    title = "Ocean-Going against Daily Workload", # use adequate x and y axes labels
+    x = "Daily Workload (hours)",
+    y = "Went in Ocean (Yes/No)"
+  )
+```
+
+#### b.
