@@ -184,3 +184,11 @@ ggplot(data = my_jitter_data, # create scatterplot visualization
 ```
 
 #### b.
+
+Figure 1: Categorical Predictor Visualization
+
+Figure 1: Frequency of Ocean Activity Types by Daily Workload Categories. This bar chart shows how different types of ocean activity are distributed across three different workload levels: Low( \< 3 hrs), Medium (3-7 hrs), and High ( \> 7 hrs). The chart shows that the highest volume and variety of ocean activities occurs on low workload days, with longboarding being the most frequent activity in that category. On the other hand, as workload hours increase, ocean activity is only quick dips.
+
+Figure 2: Continuous Predictor Visualization
+
+Figure 2: Daily Ocean Participation Relative to Continuous Workload Hours. This scatter plot shows the relationship between the specific number of hours worked in a day and the binary outcome of whether or not an ocean activity took place.
